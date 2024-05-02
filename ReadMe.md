@@ -10,6 +10,6 @@ Thanks to this simple Python tool, you will be able to send a message at the sam
 
 ## Credits
 
-<p align="center"> @ github: truusty </p>>
-<p align="center"> @ discord: trusty.py </p>>
+<p align="center"> @ github: truusty </p>
+<p align="center"> @ discord: trusty.py </p>
 
