@@ -10,5 +10,6 @@ Thanks to this simple Python tool, you will be able to send a message at the sam
 
 ## Credits
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=truusty&show_icons=true&locale=en" alt="truusty" /></p>
+<p align="center"> @ github: truusty </p>>
+<p align="center"> @ discord: trusty.py </p>>
 
