@@ -9,5 +9,5 @@ Thanks to this simple Python tool, you will be able to send a message at the sam
 ## Credits
 
 <h2 align="center"> @ github: truusty </h2>
-<h2 align="center"> @ discord: trusty.py </h2>
+<h2 align="center"> @ discord: tru.sty </h2>
 
